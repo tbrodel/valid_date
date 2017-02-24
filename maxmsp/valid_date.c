@@ -167,7 +167,7 @@ valid_date_bang(t_valid_date *x)
                 return;
         }
 
-        if (x->hour > HOURS || x->hour < 1) {
+        if (x->hour > HOURS || x->hour < 0) {
                 strcpy(status, "Hour must be between 0 and 23!");
                 error(status);
                 outlet_anything(x->m_outlet0, gensym(status), 0, NIL);
